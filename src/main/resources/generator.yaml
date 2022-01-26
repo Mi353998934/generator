@@ -1,0 +1,41 @@
+database: db_name
+jdbc:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/db_name?characterEncoding=utf-8
+  username: root
+  password: 123456
+
+generator:
+  author: myl
+  packageName: com.packageName
+  targetProject: src/main/java
+  writeFile: true
+  overwrite: true
+
+template:
+  - name: controller
+    url: Controller.ftl
+    packageName: controller
+    nameFormat: '${tableClass}Controller.java'
+  - name: service
+    url: Service.ftl
+    packageName: service
+    nameFormat: '${tableClass}Service.java'
+  - name: serviceImpl
+    url: ServiceImpl.ftl
+    packageName: service
+    nameFormat: '${tableClass}ServiceImpl.java'
+  - name: insert
+    url: jsp/insert.ftl
+    packageName: insert
+    nameFormat: 'insert${tableClass}.html'
+  - name: update
+    url: jsp/update.ftl
+    packageName: update
+    nameFormat: 'update${tableClass}.html'
+  - name: list
+    url: jsp/list.ftl
+    packageName: list
+    nameFormat: '${tableObject}List.html'
+
+field:

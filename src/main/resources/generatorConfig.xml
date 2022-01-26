@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <properties resource="db.properties"/>
+    <context id="testTables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressAllComments" value="${generator.suppressAllComments}" />
+        </commentGenerator>
+        <jdbcConnection driverClass="${jdbc.driverClassName}"
+                        connectionURL="${jdbc.url}"
+                        userId="${jdbc.username}"
+                        password="${jdbc.password}">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+        <javaModelGenerator targetPackage="${generator.packageName}.pojo"
+                            targetProject="${generator.targetProject}">
+            <property name="enableSubPackages" value="false" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="${generator.packageName}.mapper"
+                         targetProject="${generator.targetProject}">
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="${generator.packageName}.mapper"
+                             targetProject="${generator.targetProject}">
+            <property name="enableSubPackages" value="false" />
+        </javaClientGenerator>
+        <table schema="" tableName="${table.name1}"></table>
+        <table schema="" tableName="${table.name2}"></table>
+        <table schema="" tableName="${table.name3}"></table>
+        <table schema="" tableName="${table.name4}"></table>
+        <table schema="" tableName="${table.name5}"></table>
+        <table schema="" tableName="${table.name6}"></table>
+        <table schema="" tableName="${table.name7}"></table>
+        <table schema="" tableName="${table.name8}"></table>
+        <table schema="" tableName="${table.name9}"></table>
+        <table schema="" tableName="${table.name10}"></table>
+        <table schema="" tableName="${table.name11}"></table>
+        <table schema="" tableName="${table.name12}"></table>
+        <table schema="" tableName="${table.name13}"></table>
+        <table schema="" tableName="${table.name14}"></table>
+        <table schema="" tableName="${table.name15}"></table>
+        <table schema="" tableName="${table.name16}"></table>
+        <table schema="" tableName="${table.name17}"></table>
+        <table schema="" tableName="${table.name18}"></table>
+    </context>
+</generatorConfiguration>
